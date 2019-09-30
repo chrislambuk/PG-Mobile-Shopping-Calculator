@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <title>Shopping Calculator</title>
+</head>
+
+<body class="blue-grey">
+    <div class="container">
+        <form id="form-list">
+            <div>
+                <h5 class="center white-text">Shopping Calculator</h5>
+                <div>
+                    <label for="item"></label>
+                    <input class="input-field" type="text" placeholder="Enter item..." id="name" />
+                </div>
+                <div>
+                    <label for="price"></label>
+                    <input type="number" step="any" placeholder="Enter price..." id="price" />
+                </div>
+            </div>
+            <div class="center">
+                <button type="submit" class="blue-grey darken-3 waves-effect waves-light btn btn-small">+</button>
+            </div>
+        </form>
+        <div>
+            <h5 class="total white-text" id="total">Total £</h5>
+        </div>
+        <table class="blue-grey lighten-4 black-text">
+            <thead class="black-text">
+                <tr class="blue-grey lighten-3">
+                    <th>ITEM</th>
+                    <th>PRICE £</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="item-list"></tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
