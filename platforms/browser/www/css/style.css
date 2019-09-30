@@ -12,11 +12,11 @@ input[type='number']::-webkit-outer-spin-button {
 .alert {
 	position: absolute;
 	text-align: center;
-	top: 2%;
+	top: 1%;
 	left: 2%;
-	background: white;
-	padding: 5px 10px;
-	color: black;
+	background: whitesmoke;
+	padding: 10px 10px;
+	color: red;
 	width: 96%;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
