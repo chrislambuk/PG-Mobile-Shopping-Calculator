@@ -6,12 +6,12 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>PG-Shop-List</name>
+    <name>Shopping Calculator</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        A shopping list app.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@arqmedia.co.uk" href="http://arqmedia.co.uk">
+        Chris Lamb
     </author>
     <content src="index.html" />
     <access origin="*" />
