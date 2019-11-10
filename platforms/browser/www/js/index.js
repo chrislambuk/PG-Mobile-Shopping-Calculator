@@ -22,7 +22,7 @@ function onDeviceReady() {
 		const item = new Item(name, price);
 		const ui = new UI();
 		if (name === '' || price === '') {
-			ui.showAlert('Please Fill In All Info!', 'alert');
+			ui.showAlert('Please Enter An Item.', 'alert');
 		} else {
 			const list = document.getElementById('item-list');
 			const row = document.createElement('tr');
@@ -32,7 +32,7 @@ function onDeviceReady() {
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
-			ui.showAlert('Item Added!', 'alert');
+			ui.showAlert('Item Added', 'alert');
 			clearInputs();
 			storeItems(item);
 		}
@@ -43,7 +43,7 @@ function onDeviceReady() {
 	document.getElementById('item-list').addEventListener('click', function(e) {
 		const ui = new UI();
 		ui.deleteBook(e.target);
-		ui.showAlert('Item Deleted!', 'alert');
+		ui.showAlert('Item Deleted', 'alert');
 		ui.deleteItemFromStorage();
 		e.preventDefault();
 		getTotal();
