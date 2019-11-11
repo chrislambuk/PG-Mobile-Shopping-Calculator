@@ -3,54 +3,87 @@
 <html>
 
 <head>
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport"
-        content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <meta name=”viewport” content=”initial-scale=1, width=device-width, height=device-height, viewport-fit=cover”>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <title>Shopping Calculator</title>
+    <link rel="stylesheet" href="css/materialize.css">
+    <title>Shop Calc</title>
 </head>
 
 <body class="blue-grey">
-    <div class="container">
-        <form id="form-list">
+    <main>
+        <div class="container">
+            <form id="form-list">
+                <div>
+                    <h5 class="center white-text">Shop Calc</h5>
+                    <div>
+                        <label for="item"></label>
+                        <input class="input-field" type="text" placeholder="Enter item..." id="name" />
+                    </div>
+                    <div>
+                        <label for="price"></label>
+                        <input type="number" step="any" placeholder="£ Enter price..." id="price" />
+                    </div>
+                </div>
+                <div class="center">
+                    <button type="submit" class="blue-grey darken-3 waves-effect waves-light btn btn-large">+</button>
+                </div>
+            </form>
             <div>
-                <h5 class="center white-text">Shop Calc</h5>
-                <div>
-                    <label for="item"></label>
-                    <input class="input-field" type="text" placeholder="Enter item..." id="name" />
-                </div>
-                <div>
-                    <label for="price"></label>
-                    <input type="number" step="any" placeholder="£ Enter price..." id="price" />
-                </div>
+                <h5 class="total white-text" id="total">Total £</h5>
             </div>
-            <div class="center">
-                <button type="submit" class="blue-grey darken-3 waves-effect waves-light btn">+</button>
-            </div>
-        </form>
-        <div>
-            <h5 class="total white-text" id="total">Total £</h5>
+            <table class="blue-grey lighten-4 black-text">
+                <thead class="black-text">
+                    <tr class="blue-grey lighten-3">
+                        <th>ITEM</th>
+                        <th>PRICE £</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="item-list"></tbody>
+            </table>
         </div>
-        <table class="blue-grey lighten-4 black-text">
-            <thead class="black-text">
-                <tr class="blue-grey lighten-3">
-                    <th>ITEM</th>
-                    <th>PRICE £</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="item-list"></tbody>
-        </table>
-    </div>
+    </main>
 
+    <!-- Modal Trigger -->
+    <div id='help' class="page-footer blue-grey waves-effect waves-dark modal-trigger btn-small" href="#modal1">Help
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div id="helpModal" class="modal-content">
+            <h4>How To Use.</h4>
+            <h5>Stay within budget</h5>
+            <ul>
+                <li>Simply add items to your list, and the price. An approximate figure will do.</li>
+                <li>The app will total the prices for you.</li>
+                <li>You can delete each item as you go along.</li>
+            </ul>
+            <hr>
+            <div class="center">
+                <span class='btn-flat' href="https://arqmedia.co.uk/shop-calc/"><small>Info</small></span> |
+                <span class='btn-flat' href="https://arqmedia.co.uk/privacy-policy/"><small>Privacy
+                        Policy</small></span> |
+                <span class='btn-flat' href="https://arqmedia.co.uk/tcs/"><small>T&Cs</small></span>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <span href="#!" class="modal-close waves-effect waves-red btn-flat right">Close</span>
+        </div>
+    </div>
     <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
 </body>
 
 </html>

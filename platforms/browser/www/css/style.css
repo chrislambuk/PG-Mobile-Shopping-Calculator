@@ -1,6 +1,15 @@
 body{
-	padding-top: 20px;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+	padding-top: env(safe-area-inset-top); /* iOS 11.2 */
 }
+main{
+	flex: 1 0 auto;
+	padding-top: 30px;
+}
+
 td,
 th {
 	padding: 5px 5px 5px 15px !important;
@@ -15,15 +24,17 @@ input[type='number']::-webkit-outer-spin-button {
 .alert {
 	position: absolute;
 	text-align: center;
-	top: 3%;
-	left: 2%;
+	top: 5%;
+	left: 5%;
 	background: whitesmoke;
 	padding: 10px 10px;
 	color: red;
-	width: 96%;
+	width: 90%;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
-
+#helpModal{
+	padding-bottom: 0px !important;
+}
 a {
 	font-size: 1.2rem;
 	color: black !important;
@@ -49,3 +60,12 @@ input:focus {
 	border-bottom: 1px solid white !important;
 	box-shadow: 0 1px 0 0 grey !important;
 }
+#help{
+	width:100%;
+}
+
+.page-footer {
+	width: 100%;
+	margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
+	margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
+	}

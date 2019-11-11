@@ -1,6 +1,7 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
+
 	// CREATE OBJECTS
 	function Item(name, price) {
 		this.name = name.toUpperCase();
@@ -32,7 +33,7 @@ function onDeviceReady() {
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
-			ui.showAlert('Item Added', 'alert');
+			ui.showAlert('Added', 'alert');
 			clearInputs();
 			storeItems(item);
 		}
@@ -43,7 +44,7 @@ function onDeviceReady() {
 	document.getElementById('item-list').addEventListener('click', function(e) {
 		const ui = new UI();
 		ui.deleteBook(e.target);
-		ui.showAlert('Item Deleted', 'alert');
+		ui.showAlert('Deleted', 'alert');
 		ui.deleteItemFromStorage();
 		e.preventDefault();
 		getTotal();
