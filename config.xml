@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.arqmedia.shopcalc" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Shop Calc</name>
+    <name>Shop To†al</name>
     <description>
-        A shopping list app.
+        A shopping list budget app.
     </description>
     <author email="info@arqmedia.co.uk" href="http://arqmedia.co.uk">
         Chris Lamb
@@ -11,7 +11,9 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="phonegap-version" value="cli-8.0.0" />
-    <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
+    <preference name="StatusBarStyle" value="default" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <!-- <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
@@ -26,8 +28,7 @@
     <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.4.3" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
-    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" /> -->
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
