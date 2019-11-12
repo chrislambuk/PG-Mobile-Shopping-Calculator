@@ -9,6 +9,17 @@ main{
 	flex: 1 0 auto;
 	padding-top: 30px;
 }
+.nav-wrapper h6{
+	font-size: 1.3rem;
+}
+
+.nav-wrapper{
+	padding-top: 20px;
+}
+
+nav{
+	height: 60px;
+}
 
 td,
 th {
