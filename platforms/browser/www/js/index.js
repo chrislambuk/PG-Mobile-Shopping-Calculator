@@ -1,7 +1,6 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
-
 	// CREATE OBJECTS
 	function Item(name, price) {
 		this.name = name.toUpperCase();
@@ -23,7 +22,7 @@ function onDeviceReady() {
 		const item = new Item(name, price);
 		const ui = new UI();
 		if (name === '' || price === '') {
-			ui.showAlert('Please Enter An Item.', 'alert');
+			ui.showAlert('Enter An Item.', 'alert animated bounceInDown');
 		} else {
 			const list = document.getElementById('item-list');
 			const row = document.createElement('tr');
@@ -33,7 +32,7 @@ function onDeviceReady() {
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
-			ui.showAlert('Added', 'alert');
+			ui.showAlert('Added', 'alert animated bounceInDown');
 			clearInputs();
 			storeItems(item);
 		}
@@ -44,7 +43,7 @@ function onDeviceReady() {
 	document.getElementById('item-list').addEventListener('click', function(e) {
 		const ui = new UI();
 		ui.deleteBook(e.target);
-		ui.showAlert('Deleted', 'alert');
+		ui.showAlert('Deleted', 'alert animated bounceInDown');
 		ui.deleteItemFromStorage();
 		e.preventDefault();
 		getTotal();
@@ -63,7 +62,7 @@ function onDeviceReady() {
 		container.insertBefore(div, form);
 		setTimeout(function() {
 			document.querySelector('.alert').remove();
-		}, 1500);
+		}, 2000);
 	};
 	// DELETE ITEM
 	UI.prototype.deleteBook = function(target) {

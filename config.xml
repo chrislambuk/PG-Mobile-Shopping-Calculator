@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arqmedia.shopcalc" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Shop To†al</name>
+<widget id="com.arqmedia.shopcalc" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Shop Total</name>
     <description>
         A shopping list budget app.
     </description>
@@ -54,6 +54,7 @@
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
         <icon height="80" platform="ios" src="www/res/icon/ios/icon-40@2x.png" width="80" />
+        <icon height="120" platform="ios" src="www/res/icon/ios/icon-40@3x.png" width="120" />
         <icon height="50" platform="ios" src="www/res/icon/ios/icon-50.png" width="50" />
         <icon height="100" platform="ios" src="www/res/icon/ios/icon-50@2x.png" width="100" />
         <icon height="60" platform="ios" src="www/res/icon/ios/icon-60.png" width="60" />
@@ -63,6 +64,8 @@
         <icon height="144" platform="ios" src="www/res/icon/ios/icon-72@2x.png" width="144" />
         <icon height="76" platform="ios" src="www/res/icon/ios/icon-76.png" width="76" />
         <icon height="152" platform="ios" src="www/res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="167" platform="ios" src="www/res/icon/ios/icon-83.5@2x.png" width="167" />
+        <icon height="167" platform="ios" src="www/res/icon/ios/icon-167.png" width="167" />
         <icon height="29" platform="ios" src="www/res/icon/ios/icon-small.png" width="29" />
         <icon height="58" platform="ios" src="www/res/icon/ios/icon-small@2x.png" width="58" />
         <icon height="87" platform="ios" src="www/res/icon/ios/icon-small@3x.png" width="87" />
