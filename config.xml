@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arqmedia.shopcalc" version="1.1.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.arqmedia.shopcalc" version="1.1.6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Shop Total</name>
     <description>
         A shopping list budget app.
@@ -11,10 +11,11 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="phonegap-version" value="cli-8.0.0" />
-    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <!-- <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
-    <preference name="StatusBarDefaultScrollToTop" value="false" />
+    <preference name="StatusBarDefaultScrollToTop" value="false" /> -->
     <!-- <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
         <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
         <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
@@ -28,7 +29,7 @@
         <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0" />
         <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
         <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />-->
-    <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.4.3" />
+    <!-- <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.4.3" /> -->
         <!-- <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
         <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />  -->
     <platform name="ios">
