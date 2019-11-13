@@ -33,11 +33,11 @@
         <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
         <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />  -->
     <platform name="ios">
-<edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
-    <true/>
-</edit-config>
-<edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
-    <false/>
+        <edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
+        <true/>
+    </edit-config>
+        <edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
+        <false/>
 </edit-config>
         <icon height="1024" platform="ios" src="www/res/icon/ios/icon-1024.png" width="1024" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />

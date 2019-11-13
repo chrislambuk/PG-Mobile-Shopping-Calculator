@@ -80,6 +80,8 @@ input:focus {
 }
 
 .page-footer {
+	position: fixed;
+	bottom: 0;
 	width: 100%;
 	margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
 	margin-bottom: env(safe-area-inset-bottom); /* iOS 11.2 */
