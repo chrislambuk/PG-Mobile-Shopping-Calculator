@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arqmedia.shopcalc" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.arqmedia.shopcalc" version="1.2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Shop Total</name>
     <description>
-        A shopping list budget app.
+        A shopping list budgeting app.
     </description>
     <author email="info@arqmedia.co.uk" href="http://arqmedia.co.uk">
         Chris Lamb
@@ -11,12 +11,12 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="phonegap-version" value="cli-8.0.0" />
-    <!-- <preference name="ios-statusbarstyle" value="default" /> -->
-    <preference name="StatusBarStyle" value="blackopaque" />
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
-    <preference name="StatusBarDefaultScrollToTop" value="false" />
-    <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.4.3" />
+    <!-- <preference name="StatusBarDefaultScrollToTop" value="false" /> -->
+    <!-- <preference name="ios-statusbarstyle" value="black-opaque" /> -->
+    <!-- <preference name="StatusBarStyle" value="blackopaque" /> -->
+    <!-- <preference name="StatusBarOverlaysWebView" value="true" /> -->
+    <!-- <preference name="StatusBarBackgroundColor" value="#000000" /> -->
+    <!-- <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.4.3" /> -->
     <!-- <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
         <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
         <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
@@ -33,6 +33,12 @@
         <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
         <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />  -->
     <platform name="ios">
+<edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
+    <true/>
+</edit-config>
+<edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
+    <false/>
+</edit-config>
         <icon height="1024" platform="ios" src="www/res/icon/ios/icon-1024.png" width="1024" />
         <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />
         <icon height="40" platform="ios" src="www/res/icon/ios/icon-40.png" width="40" />
