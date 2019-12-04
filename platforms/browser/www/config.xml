@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
+<<<<<<< Updated upstream
 <widget id="com.arqmedia.shopcalc" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+=======
+<widget id="com.arqmedia.shopcalc" version="1.2.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+>>>>>>> Stashed changes
     <feature name="Camera">
         <param name="browser-package" value="Camera" />
     </feature>
@@ -14,6 +18,7 @@
         Chris Lamb
     </author>
     <content src="index.html" />
+    <gap:plugin name="phonegap-admob" source="npm" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

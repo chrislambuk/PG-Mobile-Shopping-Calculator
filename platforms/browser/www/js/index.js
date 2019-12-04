@@ -1,6 +1,17 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
+	// Set AdMobAds options:
+	admob.setOptions({
+		publisherId: 'ca-app-pub-3940256099942544/2934735716', // Required
+		// interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
+		tappxIdiOS: 'pub-51132-ios-6649', // Optional
+		// tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+		tappxShare: 0.5 // Optional
+	});
+	
+	admob.createBannerView();
+
 	// CREATE OBJECTS
 	function Item(name, price) {
 		this.name = name.toUpperCase();
