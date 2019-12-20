@@ -1,17 +1,6 @@
 document.addEventListener('deviceready', onDeviceReady, false);
 
 function onDeviceReady() {
-	// Set AdMobAds options:
-	admob.setOptions({
-		publisherId: 'ca-app-pub-8816517022745547/7951138830', // Required
-		// interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
-		tappxIdiOS: 'pub-51132-ios-6649', // Optional
-		// tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
-		tappxShare: 0.5 // Optional
-	});
-
-	admob.createBannerView();
-
 	// CREATE OBJECTS
 	function Item(name, price) {
 		this.name = name.toUpperCase();
@@ -22,8 +11,8 @@ function onDeviceReady() {
 	// =======================================
 
 	// CREATE EVENT LISTENERS
-	document.addEventListener('DOMContentLoaded', getTotal());
-	document.addEventListener('DOMContentLoaded', displayItems());
+	getTotal();
+	displayItems();
 	document.getElementById('form-list').addEventListener('submit', function(e) {
 		e.preventDefault();
 		const name = document.getElementById('name').value;
@@ -33,7 +22,7 @@ function onDeviceReady() {
 		const item = new Item(name, price);
 		const ui = new UI();
 		if (name === '' || price === '') {
-			ui.showAlert('Enter An Item.', 'alert animated bounceInDown');
+			ui.showAlert('ENTER AN ITEM', 'alert animated bounceInDown');
 		} else {
 			const list = document.getElementById('item-list');
 			const row = document.createElement('tr');
@@ -43,19 +32,17 @@ function onDeviceReady() {
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
-			ui.showAlert('Added', 'alert animated bounceInDown');
+			ui.showAlert('ADDED', 'alert animated bounceInDown');
 			clearInputs();
 			storeItems(item);
+			getTotal();
 		}
-
-		getTotal();
 	});
 
 	document.getElementById('item-list').addEventListener('click', function(e) {
 		const ui = new UI();
 		ui.deleteBook(e.target);
-		ui.showAlert('Deleted', 'alert animated bounceInDown');
-		ui.deleteItemFromStorage();
+		ui.showAlert('DELETED', 'alert animated bounceInDown');
 		e.preventDefault();
 		getTotal();
 	});
@@ -76,24 +63,34 @@ function onDeviceReady() {
 		}, 2000);
 	};
 	// DELETE ITEM
-	UI.prototype.deleteBook = function(target) {
-		if (target.className === 'delete') {
-			target.parentElement.parentElement.remove();
+	UI.prototype.deleteBook = function(e) {
+		if (e.classList.contains('delete')) {
+			e.parentElement.parentElement.remove();
+			deleteItemFromStorage(e);
+			getTotal();
 		}
 	};
 	// DELETE FROM STORAGE
-	UI.prototype.deleteItemFromStorage = function(price) {
+	function deleteItemFromStorage(taskItem) {
 		let items;
 		if (localStorage.getItem('items') === null) {
 			items = [];
 		} else {
 			items = JSON.parse(localStorage.getItem('items'));
 		}
+		// console.log(taskItem.parentElement.parentElement.firstElementChild.textContent)
 		items.forEach(function(item, index) {
-			items.splice(index, 1);
+			// console.log(item.name)
+			if (
+				taskItem.parentElement.parentElement.firstElementChild.textContent ==
+				item.name
+			) {
+				items.splice(index, 1);
+			}
+			getTotal();
 		});
 		localStorage.setItem('items', JSON.stringify(items));
-	};
+	}
 
 	// ===========================================
 	// CREATE FUNCTIONS
@@ -146,4 +143,15 @@ function onDeviceReady() {
 			list.appendChild(row);
 		});
 	}
+
+	// Set AdMobAds options:
+	admob.setOptions({
+		publisherId: 'ca-app-pub-8816517022745547/7951138830', // Required
+		// interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
+		tappxIdiOS: 'pub-51132-ios-6649', // Optional
+		// tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
+		tappxShare: 0.5 // Optional
+	});
+
+	admob.createBannerView();
 }
