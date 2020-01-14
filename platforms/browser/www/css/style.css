@@ -40,7 +40,7 @@ nav {
 
 td,
 th {
-	padding: 5px 5px 5px 15px !important;
+	padding: 5px 5px 5px 5px !important;
 }
 
 input[type='number']::-webkit-inner-spin-button,
@@ -72,13 +72,39 @@ a {
 	padding: 1px 7px;
 	background: white !important;
 	border-radius: 3px;
+	margin: 0;
 }
 a:hover {
 	color: red !important;
 }
 
+#total{
+	margin-left: 10px;
+}
+
+table{
+	margin: 0 auto;
+	width: 320px;
+}
+
+th:nth-child(1) {
+	width: 160px;
+}
+th:nth-child(2) {
+	width: 120px;
+}
+th:nth-child(3) {
+	width: 40px;
+	text-align: center;
+}
+td:nth-child(1) {
+	width: 160px;
+}
+td:nth-child(2) {
+	width: 120px;
+}
 td:nth-child(3) {
-	width: 10%;
+	width: 40px;
 	text-align: center;
 }
 
