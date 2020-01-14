@@ -78,33 +78,28 @@ a:hover {
 	color: red !important;
 }
 
-#total{
-	margin-left: 10px;
-}
-
 table{
 	margin: 0 auto;
-	width: 320px;
 }
 
 th:nth-child(1) {
-	width: 160px;
+	width: 50%px;
 }
 th:nth-child(2) {
-	width: 120px;
+	width: 30%;
 }
 th:nth-child(3) {
-	width: 40px;
+	width: 20%;
 	text-align: center;
 }
 td:nth-child(1) {
-	width: 160px;
+	width: 50%;
 }
 td:nth-child(2) {
-	width: 120px;
+	width: 30%;
 }
 td:nth-child(3) {
-	width: 40px;
+	width: 20%;
 	text-align: center;
 }
 
