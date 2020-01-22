@@ -147,10 +147,6 @@ function onDeviceReady() {
 	// Set AdMobAds options:
 	admob.setOptions({
 		publisherId: 'ca-app-pub-8816517022745547/7951138830', // Required
-		// interstitialAdId:     "ca-app-pub-XXXXXXXXXXXXXXXX/IIIIIIIIII",  // Optional
-		tappxIdiOS: 'pub-51132-ios-6649', // Optional
-		// tappxIdAndroid:       "/XXXXXXXXX/Pub-XXXX-Android-AAAA",        // Optional
-		tappxShare: 0.5 // Optional
 	});
 
 	admob.createBannerView();
