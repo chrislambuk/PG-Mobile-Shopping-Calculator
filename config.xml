@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.arqmedia.shopcalc" version="1.3.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.arqmedia.shopcalc" version="1.3.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Shop Total</name>
     <description>
         A shopping list budgeting app.
@@ -12,15 +12,15 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="phonegap-version" value="cli-8.0.0" />
     <gap:plugin name="phonegap-admob" source="npm"/>
-        <edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
-        <true/>
-        </edit-config>
-        <edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
-        <false/>
-        </edit-config>
-        	<config-file target="*-Info.plist" parent="GADApplicationIdentifier">
+    <edit-config file="*-Info.plist" target="UIStatusBarHidden" mode="merge">
+    <true/>
+    </edit-config>
+    <edit-config file="*-Info.plist" target="UIViewControllerBasedStatusBarAppearance" mode="merge">
+    <false/>
+    </edit-config>
+    <config-file target="*-Info.plist" parent="GADApplicationIdentifier">
 	<string>ca-app-pub-8816517022745547~2890383848</string>
-</config-file>
+    </config-file>
     <platform name="ios">
             <icon height="1024" platform="ios" src="www/res/icon/ios/icon-1024.png" width="1024" />
             <icon height="114" platform="ios" src="www/res/icon/ios/icon@2x.png" width="114" />

@@ -116,6 +116,7 @@ input:focus {
 }
 
 .page-footer {
+	border-bottom: 3px solid RGBA(56, 71, 78, 1.00);
 	z-index: 10;
 	width: 100%;
 	margin-bottom: constant(safe-area-inset-bottom); /* iOS 11.0 */
