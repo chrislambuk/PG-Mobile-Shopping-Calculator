@@ -28,7 +28,7 @@ function onDeviceReady() {
 			const row = document.createElement('tr');
 			row.innerHTML += `
     <td>${name2}</td>
-    <td>£${price2}</td>
+    <td>${price2}</td>
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
@@ -121,7 +121,7 @@ function onDeviceReady() {
 				total += parseFloat(prices[i].price);
 			}
 			final = total.toFixed(2);
-			document.getElementById('total').innerHTML = `TOTAL: £${final}`;
+			document.getElementById('total').innerHTML = `TOTAL: ${final}`;
 		}
 	}
 	// DISPLAY ITEMS IN STORAGE
@@ -137,7 +137,7 @@ function onDeviceReady() {
 			const row = document.createElement('tr');
 			row.innerHTML += `
     <td>${item.name}</td>
-    <td>£${item.price}</td>
+    <td>${item.price}</td>
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
@@ -145,9 +145,41 @@ function onDeviceReady() {
 	}
 
 	// Set AdMobAds options:
-	admob.setOptions({
-		publisherId: 'ca-app-pub-8816517022745547/7951138830', // Required
-	});
+	// admob.setOptions({
+	// 	publisherId: 'ca-app-pub-8816517022745547/7951138830', // Required
+	// });
 
-	admob.createBannerView();
+	// admob.createBannerView();
 }
+
+var admobid = {};
+	if (/(android)/i.test(navigator.userAgent)) {
+		admobid = {
+			// for Android
+			banner: 'ca-app-pub-3940256099942544/6300978111'
+			// interstitial: 'ca-app-pub-6869992474017983/1657046752'
+		};
+	} else if (/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+		admobid = {
+			// for iOS
+			banner: 'ca-app-pub-3940256099942544/6300978111'
+			// interstitial: 'ca-app-pub-6869992474017983/7563979554'
+		};
+	} else {
+		admobid = {
+			// for Windows Phone
+			banner: 'ca-app-pub-3940256099942544/6300978111'
+			// interstitial: 'ca-app-pub-6869992474017983/1355127956'
+		};
+	}
+	
+	function initApp() {
+		if (AdMob) {
+			AdMob.createBanner({
+				adId: admobid.banner,
+				position: AdMob.AD_POSITION.BOTTOM_CENTER,
+				autoShow: true
+			});
+		}
+	}
+	document.addEventListener('deviceready', initApp, false);

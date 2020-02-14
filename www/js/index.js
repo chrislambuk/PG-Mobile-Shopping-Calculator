@@ -28,7 +28,7 @@ function onDeviceReady() {
 			const row = document.createElement('tr');
 			row.innerHTML += `
     <td>${name2}</td>
-    <td>£${price2}</td>
+    <td>${price2}</td>
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
@@ -137,7 +137,7 @@ function onDeviceReady() {
 			const row = document.createElement('tr');
 			row.innerHTML += `
     <td>${item.name}</td>
-    <td>£${item.price}</td>
+    <td>${item.price}</td>
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
