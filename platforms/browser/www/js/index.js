@@ -28,7 +28,7 @@ function onDeviceReady() {
 			const row = document.createElement('tr');
 			row.innerHTML += `
     <td>${name2}</td>
-    <td>£${price2}</td>
+    <td>${price2}</td>
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
@@ -114,14 +114,14 @@ function onDeviceReady() {
 		let prices = JSON.parse(localStorage.getItem('items'));
 
 		if (prices === null) {
-			document.getElementById('total').innerHTML = `TOTAL: £ 0`;
+			document.getElementById('total').innerHTML = `TOTAL: 0`;
 		} else {
 			let total = 0;
 			for (i = 0; i < prices.length; i++) {
 				total += parseFloat(prices[i].price);
 			}
 			final = total.toFixed(2);
-			document.getElementById('total').innerHTML = `TOTAL: £${final}`;
+			document.getElementById('total').innerHTML = `TOTAL: ${final}`;
 		}
 	}
 	// DISPLAY ITEMS IN STORAGE
@@ -137,7 +137,7 @@ function onDeviceReady() {
 			const row = document.createElement('tr');
 			row.innerHTML += `
     <td>${item.name}</td>
-    <td>£${item.price}</td>
+    <td>${item.price}</td>
     <td><a href="#" class="delete">-</a></td>
     `;
 			list.appendChild(row);
