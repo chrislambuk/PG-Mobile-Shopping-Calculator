@@ -1,0 +1,12 @@
+{
+  "devDependencies": {},
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-admobpro": {
+        "ADMOB_APP_ID": "ca-app-pub-8816517022745547~9854493814",
+        "PLAY_SERVICES_VERSION": "16.0.0"
+      }
+    }
+  },
+  "dependencies": {}
+}
