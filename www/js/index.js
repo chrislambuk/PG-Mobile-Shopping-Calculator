@@ -121,7 +121,7 @@ function onDeviceReady() {
 				total += parseFloat(prices[i].price);
 			}
 			final = total.toFixed(2);
-			document.getElementById('total').innerHTML = `TOTAL: £${final}`;
+			document.getElementById('total').innerHTML = `TOTAL: ${final}`;
 		}
 	}
 	// DISPLAY ITEMS IN STORAGE
