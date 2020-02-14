@@ -114,7 +114,7 @@ function onDeviceReady() {
 		let prices = JSON.parse(localStorage.getItem('items'));
 
 		if (prices === null) {
-			document.getElementById('total').innerHTML = `TOTAL: £ 0`;
+			document.getElementById('total').innerHTML = `TOTAL:`;
 		} else {
 			let total = 0;
 			for (i = 0; i < prices.length; i++) {
